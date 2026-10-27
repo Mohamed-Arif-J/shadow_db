@@ -1,0 +1,68 @@
+# ==============================================================================
+# ShadowDB .gitignore
+# ==============================================================================
+
+# Virtual Environments
+Vritual_Env/
+[Vv]env/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Large Model Binary Weights (MUST NOT be committed to git)
+# Download link: https://drive.google.com/file/d/1GRxV7cIdVo3vaby-ZLVsBKwPBFMfKSPn/view?usp=sharing
+*.gguf
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.onnx
+
+# Node & Frontend Build Artifacts
+node_modules/
+dist/
+dist-ssr/
+*.local
+.npm/
+.eslintcache
+.stylelintcache
+
+# Large Raw & Processed Datasets (Keep code & reports, exclude heavy binaries)
+shadow_db dataset/
+*.parquet
+*.jsonl
+*.sqlite3
+*.db
+*.sqlite
+
+# Exceptions: Keep test SQLite database for studio testing if inside public
+!shadowdb-studio/public/*.sqlite
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temp files
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.tmp
+*.temp

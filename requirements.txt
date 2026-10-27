@@ -1,0 +1,46 @@
+# ==============================================================================
+# ShadowDB - Environment Requirements & Model Download
+# ==============================================================================
+#
+# MODEL WEIGHTS (.GGUF) DOWNLOAD:
+# The fine-tuned Qwen 2.5 Coder 7B Instruct model binary (4.68 GB, Q4_K_M)
+# can be downloaded directly from Google Drive:
+#
+# Download Link:
+# https://drive.google.com/file/d/1GRxV7cIdVo3vaby-ZLVsBKwPBFMfKSPn/view?usp=sharing
+#
+# After downloading, place the file into the `shadowdb_model/` directory:
+# shadowdb_model/Qwen2.5-Coder-7B-Instruct.Q4_K_M.gguf
+#
+# To register and serve locally with Ollama:
+#   cd shadowdb_model
+#   ollama create shadowdb -f Modelfile
+#   ollama run shadowdb
+# ==============================================================================
+
+# Core Machine Learning & Fine-Tuning
+torch>=2.2.0
+transformers>=4.40.0
+datasets>=2.18.0
+accelerate>=0.28.0
+peft>=0.10.0
+bitsandbytes>=0.43.0
+trl>=0.8.0
+
+# Data Science & Processing
+pandas>=2.1.0
+numpy>=1.26.0
+pyarrow>=14.0.0
+fastparquet>=2024.2.0
+
+# Data Visualization & Reporting
+matplotlib>=3.8.0
+seaborn>=0.13.0
+wordcloud>=1.9.0
+
+# SQL Analysis & Dialect Verification
+sqlglot>=20.0.0
+
+# Networking & Utilities
+requests>=2.31.0
+tqdm>=4.66.0
